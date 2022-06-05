@@ -1,3 +1,5 @@
+CREATE DATABASE [Northwind]
+GO
 USE [Northwind]
 GO
 /****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 6/3/2022 6:59:33 PM ******/
