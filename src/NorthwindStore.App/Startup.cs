@@ -25,22 +25,21 @@ namespace NorthwindStore.App
     {
         private readonly IWebHostEnvironment env;
         private readonly IConfiguration configuration;
+
         private static WindsorContainer container;
 
-        public Startup(IWebHostEnvironment env)
+        public Startup(IWebHostEnvironment env, IConfiguration configuration)
         {
             this.env = env;
-            this.configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: false)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables()
-                .Build();
+            this.configuration = configuration;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationInsightsTelemetry(configuration);
+
             services.AddDataProtection();
             services.AddAuthorization();
             services.AddWebEncoders();
