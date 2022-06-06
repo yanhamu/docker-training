@@ -24,7 +24,7 @@ Cílem tohoto labu je zprovoznit vzorovou webovou aplikaci v kontejneru a spusti
 
 10. Ověřte pomocí `docker image ls`, že se container image vyrobil.
 
-11. Spusťte kontejner pomocí `docker run -it -p 5000:80 --rm northwindstore:0.1`.
+11. Spusťte kontejner pomocí `docker run -it -p 5000:80 --rm northwindstore:0.1 .`
 
 12. V prohlížeči na adrese http://localhost:5000 ověřte, že aplikace nastartuje.
 
