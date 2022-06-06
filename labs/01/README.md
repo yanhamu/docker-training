@@ -42,7 +42,9 @@ Cílem tohoto labu je zprovoznit vzorovou webovou aplikaci v kontejneru a spusti
 
 Aplikaci jsme zkompilovali v release módu, proto nezobrazuje chybové hlášky. Řešením je spustit ji s environment proměnnou `ASPNETCORE_ENVIRONMENT` nastavenou na hodnotu `Development`.
 
-1. Přidejte do příkazu `docker run` parametr `-e ASPNETCORE_ENVIRONMENT=Development` a donuťte aplikaci zobrazit chybovou stránku, kde jsou detaily chyby.
+1. Přidejte do příkazu `docker run` mezi ostatní optiony parametr `-e ASPNETCORE_ENVIRONMENT=Development` a donuťte aplikaci zobrazit chybovou stránku, kde jsou detaily chyby.
+
+> Pozor, option `-e` je třeba předat před název image a tagu. Pokud bychom ji přidali nakonec, pošle se to jako argument do procesu `dotnet` uvnitř kontejneru. 
 
 ## Krok 3 - spuštění SQL databáze v kontejneru
 
