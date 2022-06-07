@@ -26,4 +26,4 @@ az aks get-credentials --resource-group <RESOURCE_GROUP> --name <CLUSTER_NAME>
 
 Aby mohl Kubernetes cluster stahovat kontejnery z Azure Container Registry, je třeba mezi těmito službami nastavit autentizaci. Jde to kompletně bez hesel nebo secretů, pokud máte práva na obě služby.
 
-1. Spusťte příkaz `az aks update --resource-group <RESOURCE_GROUP> --name training-aks --attach-acr <REGISTRY_NAME>`
+1. Spusťte příkaz `az aks update --resource-group <RESOURCE_GROUP> --name <CLUSTER_NAME> --attach-acr <REGISTRY_NAME>`
