@@ -55,6 +55,8 @@ kubectl port-forward pods/<POD_NAME> 5000:80
     * Vnější port (parametr `port`) bude `5000`
 
     * Vnitřní port (to, na kterém běží aplikace v kontejnerech - `targetPort`) je `80`.
+    
+    * Na konec souboru přidejte typ služby `  type: LoadBalancer`. Pozor na odsazení - je to vlastnost elementu `spec`, ne portu.
 
 3. Ujistěte se, že jste v shellu na cestě `labs/12`
 
