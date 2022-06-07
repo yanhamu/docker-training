@@ -17,7 +17,7 @@ az aks create --resource-group <RESOURCE_GROUP> --name <CLUSTER_NAME> --node-cou
 4. Přihlaste `kubectl` do clusteru pomocí tohoto příkazu:
 
 ```
-az aks get-credentials --resource-group <RESOURCE_GROUP> --name training-aks
+az aks get-credentials --resource-group <RESOURCE_GROUP> --name <CLUSTER_NAME>
 ```
 
 5. Ověřte, že vidíte na cluster pomocí příkazu `kubectl get nodes`
