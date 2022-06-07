@@ -32,7 +32,7 @@ Cílem tohoto labu je zprovoznění volume pro adresář `wwwroot/images` v apli
 
 7. Ověřte v Azure portálu, že se obrázek skutečně uložil.
 
-8. Zabijte pod aplikace pomocí `kubectl delete <POD_NAME>`. Cluster by si hned měl vytvořit nový.
+8. Zabijte pod aplikace pomocí `kubectl delete pod <POD_NAME>`. Cluster by si hned měl vytvořit nový.
 
 9. Ověřte, že se nahraný obrázek zachoval.  
 
