@@ -7,5 +7,8 @@ COPY northwind.sql /usr/scripts/
 COPY entrypoint.sh /usr/scripts/
 COPY init-db.sh /usr/scripts/
 
+RUN chmod +x /usr/scripts/entrypoint.sh
+RUN chmod +x /usr/scripts/init-db.sh
+
 EXPOSE 1433
 CMD /bin/bash /usr/scripts/entrypoint.sh
