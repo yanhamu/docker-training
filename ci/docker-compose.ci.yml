@@ -11,6 +11,8 @@ services:
     networks:
     - northwindstore-dev
   northwindstore.db:
+    ports:
+    - "1433"
     networks:
     - northwindstore-dev
 
