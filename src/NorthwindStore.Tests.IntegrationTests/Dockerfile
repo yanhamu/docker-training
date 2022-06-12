@@ -11,6 +11,6 @@ RUN dotnet restore "NorthwindStore.Tests.IntegrationTests/NorthwindStore.Tests.I
 
 COPY . .
 WORKDIR "/src/NorthwindStore.Tests.IntegrationTests"
-RUN dotnet build "NorthwindStore.Tests.IntegrationTests.csproj" -c Release -o /app/build
+RUN dotnet build "NorthwindStore.Tests.IntegrationTests.csproj"
 
 ENTRYPOINT ["dotnet", "test", "NorthwindStore.Tests.IntegrationTests.csproj", "--no-build"]
