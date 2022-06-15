@@ -56,7 +56,9 @@ kubectl create secret tls ingress-tls --namespace northwindstore-prod --key aks-
     secretName: ingress-tls
 ```
 
-4. Nasaďte ingressy do clusteru:
+4. U anotace `rewrite-target` můžete adresu upravit rovnou na `https`.
+
+5. Nasaďte ingressy do clusteru:
 
 ```
 kubectl apply -f app-ingress-prod.yml -f app-ingress-prod-redirect.yml --namespace northwindstore-prod
